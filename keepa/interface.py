@@ -657,7 +657,7 @@ class Keepa(object):
                                                 out_of_stock_as_nan)
         return response
 
-    def best_sellers_query(self, category, domain='US'):
+    def best_sellers_query(self, category, domain='US', rankrange=0):
         """
         Retrieve an ASIN list of the most popular products based on
         sales in a specific category or product group.  See
@@ -695,6 +695,13 @@ class Keepa(object):
             Amazon locale you want to access. Must be one of the following
             RESERVED, US, UK, DE, FR, JP, CA, CN, IT, ES, IN, MX
             Default US
+        
+        range : int
+            Retrieve a best seller list based on a sales rank average instead
+            of the current sales rank.
+            Valid values: 0 = use current rank | 30 = 30 day average | 
+            90 = 90 day average | 180 = 180 day average
+            Default 0
 
         Returns
         -------
@@ -705,7 +712,8 @@ class Keepa(object):
 
         payload = {'key': self.accesskey,
                    'domain': DCODES.index(domain),
-                   'category': category}
+                   'category': category,
+                   'range': rankrange}
 
         response = self._request('bestsellers', payload)
         if 'bestSellersList' in response:
