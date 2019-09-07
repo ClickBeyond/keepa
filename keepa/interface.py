@@ -11,6 +11,7 @@ import numpy as np
 
 from keepa.product_finder_keys import PRODUCT_REQUEST_KEYS
 
+logging.basicConfig()
 log = logging.getLogger(__name__)
 log.setLevel('DEBUG')
 
