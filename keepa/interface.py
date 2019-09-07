@@ -29,7 +29,7 @@ SCODES = {'400': 'REQUEST_REJECTED',
 # domain codes
 # Valid values: [ 1: com | 2: co.uk | 3: de | 4: fr | 5:
 #                 co.jp | 6: ca | 7: cn | 8: it | 9: es | 10: in | 11: com.mx ]
-DCODES = ['RESERVED', 'US', 'GB', 'DE', 'FR', 'JP', 'CA', 'CN', 'IT', 'ES',
+DCODES = ['RESERVED', 'US', 'UK', 'DE', 'FR', 'JP', 'CA', 'CN', 'IT', 'ES',
           'IN', 'MX']
 
 
@@ -335,7 +335,7 @@ class Keepa(object):
             strings (ISO8601, with or without time in UTC).
 
         domain : str, optional
-            One of the following Amazon domains: RESERVED, US, GB, DE,
+            One of the following Amazon domains: RESERVED, US, UK, DE,
             FR, JP, CA, CN, IT, ES, IN, MX Defaults to US.
 
         offers : int, optional
@@ -577,7 +577,7 @@ class Keepa(object):
 
         domain : str
             One of the following Amazon domains:
-            RESERVED, US, GB, DE, FR, JP, CA, CN, IT, ES, IN, MX
+            RESERVED, US, UK, DE, FR, JP, CA, CN, IT, ES, IN, MX
 
         offers : bool, optional
             Adds product offers to product data.
@@ -693,7 +693,7 @@ class Keepa(object):
 
         domain : str
             Amazon locale you want to access. Must be one of the following
-            RESERVED, US, GB, DE, FR, JP, CA, CN, IT, ES, IN, MX
+            RESERVED, US, UK, DE, FR, JP, CA, CN, IT, ES, IN, MX
             Default US
 
         Returns
@@ -763,7 +763,7 @@ class Keepa(object):
 
         domain : str
             Amazon locale you want to access. Must be one of the following
-            RESERVED, US, GB, DE, FR, JP, CA, CN, IT, ES, IN, MX
+            RESERVED, US, UK, DE, FR, JP, CA, CN, IT, ES, IN, MX
             Default US
 
         include_parents : int
@@ -813,7 +813,7 @@ class Keepa(object):
             as in the offers results from a product query.
 
         domain : str, optional
-            One of the following Amazon domains: RESERVED, US, GB, DE,
+            One of the following Amazon domains: RESERVED, US, UK, DE,
             FR, JP, CA, CN, IT, ES, IN, MX Defaults to US.
 
         Returns
@@ -1852,7 +1852,7 @@ class Keepa(object):
             - ``'categories_exclude': int``
 
         domain : str, optional
-            One of the following Amazon domains: RESERVED, US, GB, DE,
+            One of the following Amazon domains: RESERVED, US, UK, DE,
             FR, JP, CA, CN, IT, ES, IN, MX Defaults to US.
 
         Examples
